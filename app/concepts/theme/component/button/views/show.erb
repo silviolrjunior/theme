@@ -1,0 +1,7 @@
+<%= mount_open_tag %>
+  <% if block_given? %>
+    <%= yield %>
+  <% else %>
+    <%= text %>
+  <% end %>
+<%= mount_close_tag %>

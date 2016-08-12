@@ -1,0 +1,28 @@
+<div class="c-table-responsive">
+  <table class="<%= cell_class %>">
+    <thead>
+      <tr>
+        <% if collection_head.is_a? Array %>
+          <% collection_head.each do |head_name| %>
+            <th><%= head_name %></th>
+          <% end %>
+        <% else %>
+          <% collection_head.each do |k,v| %>
+            <th width="<%= v %>%"><%= k %></th>
+          <% end %>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% unless collection_body.blank? %>
+        <% collection_body.each do |row| %>
+          <tr>
+            <% row.each do |column| %>
+              <td><%= column %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -9,7 +9,6 @@ class Theme::Component::Alert::Cell < Cell::Concept
   end
 
   def mount_links(text)
-    text.gsub(/< (.*), (.*) >/, "\\1")
     text.gsub(/<(.*), (.*)>/, "<a class='c-alert-link' href='\\2'>\\1</a>")
   end
 
